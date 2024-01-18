@@ -33,38 +33,11 @@ int is_integer(const char *str)
 		return (0);
 	if (str[0] == '-' || str[0] == '+')
 		i = 1;
-	
+
 	for (; str[i] != '\0'; ++i)
 	{
 		if (str[i] < '0' || str[i] > '9')
-			return(0);
+			return (0);
 	}
 	return (1);
 }
-/**
-		(!isdigit(bus.arg[j]))
-		{
-			fprintf(stderr, "L%d: usage: Push integer\n", counter);
-			fclose(bus.file);
-			free(bus.content);
-			free_stack(*head);
-			exit(EXIT_FAILURE);
-		}
-		j++;
-	}
-
-	n = atoi(bus.arg);
-
-	if (bus.lifi == 0)
-		addnode(head, n);
-	else
-	{
-		fprintf(stderr, "L%d: addqueue function not defined\n", counter);
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
-		exit(EXIT_FAILURE);
-	}
-}
-*/			
-
