@@ -55,7 +55,7 @@ typedef struct instruction_s
 
 void f_add(stack_t **head, unsigned int counter);
 void pop_stack(stack_t **head);
-int addnode(stack_t **head, int n);
+void addnode(stack_t **head, int n);
 void f_div(stack_t **head, unsigned int counter);
 void free_stack(stack_t *head);
 void execute(char *content, stack_t **stack, unsigned int counter, FILE *file);

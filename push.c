@@ -7,12 +7,9 @@
  */
 void f_push(stack_t **head, unsigned int counter)
 {
-	char *arg;
 	int value;
 
-	arg = bus.arg;
-
-	if (arg == NULL || !is_integer(arg))
+	if (bus.arg == NULL || !is_integer(bus.arg))
 	{
 		fprintf(stderr, "L%d: usage push integer\n", counter);
 		fclose(bus.file);
@@ -20,27 +17,25 @@ void f_push(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	value = atoi(arg);
-
-	if (addnode(head, value))
-	{
-		fprintf(stderr, "Error: malloc failed\n");
-		fclose(bus.file);
-		free(bus.content);
-		free_stack(*head);
-		exit(EXIT_FAILURE);
-	}
+	value = atoi(bus.arg);
+	addnode(head, value);
 }
-
+/**
+ * is_integer - integer
+ * @str: string
+ */
 int is_integer(const char *str)
 {
-	if (!str || *str == '\0')
+	int i = 0;
+
+	if (str == NULL || *str == '\0')
 		return (0);
-	while (*str)
+	if (str[0] == '-' || str[0] == '+')
+		i = 1;
+	for (; str[i] != '\0'; ++i)
 	{
-		if (!isdigit(*str) && *str != '-' && *str != '+')
-			return (0);
-		str++;
+		if (str[i] < '0' || str[i] > '9')
+			return(0);
 	}
 	return (1);
 }
