@@ -67,4 +67,5 @@ void f_pall(stack_t **stack, unsigned int counter);
 void f_mod(stack_t **head, unsigned int counter);
 void f_pint(stack_t **stack, unsigned int counter);
 void f_pop(stack_t **stack, unsigned int counter);
+void f_mul(stack_t **stack, unsigned int counter);
 #endif
