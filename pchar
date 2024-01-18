@@ -1,13 +1,13 @@
-#include "monty.h"
+/**#include "monty.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-/**
+**
  * pchar - Prints the char at the top of the stack, followed by a new line.
  * @stack: Pointer to the stack.
  * @line_number: Line number in the Monty bytecode file.
- */
+ *
 void pchar(stack_t **stack, unsigned int line_number)
 {
 	if (*stack == NULL)
@@ -35,12 +35,12 @@ void pchar(stack_t **stack, unsigned int line_number)
 	free(temp);
 }
 
-/**
+**
  * processLine - Processes a line of Monty bytecode.
  * @line: Line to be processed.
  * @line_number: Line number in the Monty bytecode file.
  * @stack: Pointer to the stack.
- */
+ *
 
 void processLine(char *line, unsigned int line_number, stack_t **stack)
 {
@@ -64,3 +64,4 @@ void processLine(char *line, unsigned int line_number, stack_t **stack)
 	exit(EXIT_FAILURE);
 	}
 }
+*/
