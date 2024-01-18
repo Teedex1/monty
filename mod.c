@@ -2,7 +2,7 @@
 /**
  * f_mod - modulo
  * @head: stack head
- * @counter: line_number 
+ * @counter: line_number
  * Return: 0
  */
 void f_mod(stack_t **head, unsigned int counter)
@@ -11,7 +11,7 @@ void f_mod(stack_t **head, unsigned int counter)
 
 	if (h == NULL || h->next == NULL)
 	{
-		fprintf(stderr, "L%d: can't mod, stcak too short\n", counter);
+		fprintf(stderr, "L%d: can't mod, stack too short\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
