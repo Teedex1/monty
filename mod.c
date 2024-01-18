@@ -2,7 +2,7 @@
 /**
  * f_mod - modulo
  * @head: stack head
- * @counter: line_number 
+ * @counter: line_number
  * Return: 0
  */
 void f_mod(stack_t **head, unsigned int counter)
