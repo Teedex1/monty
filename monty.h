@@ -60,6 +60,7 @@ void f_div(stack_t **head, unsigned int counter);
 void free_stack(stack_t *head);
 void execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 int main(int argc, char *argv[]);
+int is_integer(const char *str);
 void f_swap(stack_t **head, unsigned int counter);
 void f_push(stack_t **stack, unsigned int counter);
 void f_pall(stack_t **stack, unsigned int counter);

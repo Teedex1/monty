@@ -7,9 +7,8 @@
  */
 void f_swap(stack_t **head, unsigned int counter)
 {
-	int temp;
 	stack_t *first;
-        stack_t *second;
+	stack_t *second;
 
 	if (*head == NULL || (*head)->next == NULL)
 	{
@@ -21,10 +20,15 @@ void f_swap(stack_t **head, unsigned int counter)
 	}
 
 	first = *head;
-        second = first->next;
+	second = first->next;
 
-	temp = first->n;
-	first->n = second->n;
-	second->n = temp;
+	first->prev = second;
+	first->next = second->next;
+	second->prev = NULL;
+	second->next = first;
+
+	if (first->next != NULL)
+		first->next->prev = first;
+	*head = second;
 }
 	
