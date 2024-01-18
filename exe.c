@@ -21,6 +21,7 @@ void execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		{"sub", f_sub},
 		{"nop", f_nop},
 		{"pchar",f_pchar},
+		{"pstr", f_pstr},
 		{NULL, NULL}
 	};
 
