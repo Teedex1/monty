@@ -26,10 +26,16 @@ void f_add(stack_t **head, unsigned int counter)
  */
 void pop_stack(stack_t **head)
 {
-	stack_t *tmp;
+	stack_t *temp;
+
 	if (*head == NULL)
 		return;
-	tmp = *head;
-	*head = tmp->next;
-	free(tmp);
+
+	temp = *head;
+	*head = temp->next;
+
+	if (*head != NULL)
+		(*head)->prev = NULL;
+
+	free(temp);
 }
