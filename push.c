@@ -11,7 +11,7 @@ void f_push(stack_t **head, unsigned int counter)
 
 	if (bus.arg == NULL || !is_integer(bus.arg))
 	{
-		fprintf(stderr, "L%d: USAGE: push integer\n", counter);
+		fprintf(stderr, "L%d: usage: push integer\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
