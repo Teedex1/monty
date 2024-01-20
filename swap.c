@@ -31,4 +31,3 @@ void f_swap(stack_t **head, unsigned int counter)
 		first->next->prev = first;
 	*head = second;
 }
-	

@@ -72,4 +72,5 @@ void f_mul(stack_t **stack, unsigned int counter);
 void f_sub(stack_t **stack, unsigned int counter);
 void f_nop(stack_t **stack, unsigned int counter);
 void f_pstr(stack_t **head, unsigned int counter);
+void f_rotl(stack_t **head, __attribute__((unused)) unsigned int counter);
 #endif

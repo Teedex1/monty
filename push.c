@@ -11,7 +11,7 @@ void f_push(stack_t **head, unsigned int counter)
 
 	if (bus.arg == NULL || !is_integer(bus.arg))
 	{
-		fprintf(stderr, "L%d: usage push integer\n", counter);
+		fprintf(stderr, "L%d: USAGE: push integer\n", counter);
 		fclose(bus.file);
 		free(bus.content);
 		free_stack(*head);
@@ -23,6 +23,7 @@ void f_push(stack_t **head, unsigned int counter)
 /**
  * is_integer - integer
  * @str: string
+ * Return:  0
  */
 int is_integer(const char *str)
 {
@@ -35,7 +36,7 @@ int is_integer(const char *str)
 	for (; str[i] != '\0'; ++i)
 	{
 		if (str[i] < '0' || str[i] > '9')
-			return(0);
+			return (0);
 	}
 	return (1);
 }
