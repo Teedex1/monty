@@ -12,6 +12,7 @@ void free_stack(stack_t *head)
 		stack_t *next = current->next;
 
 		free(current);
+
 		current = next;
 	}
 }
